@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How NOVAAI Backups handles Google Drive access, encrypted backup files and recovery credentials.">
+  <title>Privacy policy · NOVAAI Backups</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><a class="brand" href="./">NOVAAI <span>Backups</span></a><nav aria-label="Main navigation"><a href="./">Home</a></nav></header>
+  <main id="main" class="policy">
+    <p class="eyebrow">NOVAAI BACKUPS</p>
+    <h1>Privacy policy</h1>
+    <p class="date">Last updated: 6 October 2026</p>
+    <p class="lead">NOVAAI Backups is a personal backup application operated by Jamal Aljaberi. This policy describes its intended operation. Configuration is in progress; scheduled backups have not yet been enabled.</p>
+    <h2>Data the application handles</h2>
+    <p>The application processes the owner's selected database exports, archived documents, knowledge notes and recovery configuration on the owner's Mac. It uploads encrypted backup data to the Google Drive account the owner authorizes.</p>
+    <p>It handles Google OAuth credentials and tokens, plus backup file identifiers, metadata and operational status needed to upload, verify, retain and restore backups.</p>
+    <h2>Google permissions and their purpose</h2>
+    <p>The requested Google Drive scope is <code>https://www.googleapis.com/auth/drive.file</code>. It permits access to files created by the application or explicitly authorized for it. The application uses this access to create its backup folder, upload and inspect backups, restore data, and remove backups according to the owner's configured retention policy.</p>
+    <p>This connection does not request Gmail, contacts or calendar access. The owner grants access through Google's authorization screen; the application does not collect the owner's Google password.</p>
+    <h2>Encryption and credential storage</h2>
+    <p>The planned backup process uses restic to encrypt data before rclone transfers it to Google Drive. File and folder metadata associated with the encrypted repository, its size and transfer activity remain visible to the storage provider.</p>
+    <p>Application credentials and recovery secrets are managed through 1Password and protected local runtime storage. A 1Password service-account bootstrap token is stored in macOS Keychain. Credentials and encryption keys are excluded from this website, public source code and ordinary application logs.</p>
+    <h2>Use and disclosure</h2>
+    <p>Data is used for personal backup, integrity verification, retention and recovery. Backup content is not sold, used for advertising, or submitted by this backup application to AI providers for model training or inference.</p>
+    <p>Google Drive stores the encrypted backup repository. 1Password stores configured credentials and recovery material. GitHub hosts this information website. These providers process service data under their own terms and privacy policies. There are no added analytics scripts, advertising scripts or application cookies on this site; GitHub may process normal hosting request data.</p>
+    <h2>Retention and deletion</h2>
+    <p>Backup retention will be set by the owner before scheduled backups begin. Removing a source document does not immediately erase its copies from older backups; those copies remain until the relevant backup data is removed under the retention policy.</p>
+    <p>The owner can stop future backups by revoking the Google connection and can remove existing backup data from Drive. Google Drive trash and provider retention rules may delay permanent deletion. Local staging files and recovery copies must be handled separately.</p>
+    <h2>Revoking access</h2>
+    <p>Visit <a href="https://myaccount.google.com/connections">Google Account connections</a>, select NOVAAI Backups and remove its access. This stops future authorized API access but does not itself delete existing backups. To resume, the owner must authorize the application again.</p>
+    <h2>Questions and policy updates</h2>
+    <p>The operator is <a href="https://github.com/jamal-aljaberi">Jamal Aljaberi</a>. General application questions or privacy requests can be raised through the <a href="https://github.com/jamal-aljaberi/novaai-backups/issues">project's GitHub issues</a>. Issues are public: include no documents, account tokens or other private information. This page will be updated when the application's data practices change.</p>
+  </main>
+  <footer><a href="./">NOVAAI Backups</a><span>Privacy policy</span></footer>
+</body>
+</html>
