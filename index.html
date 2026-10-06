@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="NOVAAI Backups is a personal utility for encrypted backups from an owner-managed Mac to Google Drive.">
+  <title>NOVAAI Backups</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header><a class="brand" href="./">NOVAAI <span>Backups</span></a><nav aria-label="Main navigation"><a href="privacy.html">Privacy policy</a></nav></header>
+  <main id="main">
+    <section class="intro">
+      <p class="eyebrow">PERSONAL BACKUP UTILITY</p>
+      <h1>A recovery copy,<br>kept off the Mac.</h1>
+      <p class="lead">NOVAAI Backups is a personal application operated by Jamal Aljaberi. It is being configured to encrypt recovery copies of his document system on his Mac and store them in his Google Drive.</p>
+      <p class="status">Setup in progress · Backup and restore testing pending</p>
+    </section>
+    <section class="details" aria-labelledby="purpose">
+      <h2 id="purpose">What the application does</h2>
+      <div><p>The intended backup set includes database exports, archived documents, knowledge notes and the configuration needed for recovery. The backup process runs on the owner's Mac using restic and rclone.</p><p>Backups are encrypted on the Mac before upload. Restoring them requires the backup encryption key as well as access to the stored backup files.</p></div>
+    </section>
+    <section class="details" aria-labelledby="access">
+      <h2 id="access">Why Google Drive access is requested</h2>
+      <div><p>The owner signs in through Google and authorizes the <strong>drive.file</strong> permission. This lets the application create its backup folder and upload, read, update or delete backup files it creates or files explicitly authorized for it.</p><p>The connection supports scheduled uploads, integrity checks, restore tests and the owner's chosen retention policy. Google Drive storage usage belongs to the authorized account.</p></div>
+    </section>
+    <section class="details" aria-labelledby="control">
+      <h2 id="control">Owned and controlled by you</h2>
+      <div><p>This application is for the owner's personal use. Access can be revoked in Google Account settings. This website provides application information and does not offer sign-in, file upload or account registration.</p><p><a class="text-link" href="privacy.html">Read the privacy policy <span aria-hidden="true">→</span></a></p></div>
+    </section>
+    <section class="details" aria-labelledby="contact">
+      <h2 id="contact">Contact</h2>
+      <div><p>Operator: <a href="https://github.com/jamal-aljaberi">Jamal Aljaberi</a>.</p><p>For application questions, <a href="https://github.com/jamal-aljaberi/novaai-backups/issues">open a GitHub issue</a>. Include only a general description; keep credentials and private documents out of public issues.</p></div>
+    </section>
+  </main>
+  <footer><span>NOVAAI Backups</span><a href="privacy.html">Privacy policy</a></footer>
+</body>
+</html>
